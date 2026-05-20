@@ -52,7 +52,6 @@ button {
   position: relative;
   width: min(100vw, 480px);
   height: 100dvh;
-  max-height: 900px;
   overflow: hidden;
   background: var(--bg);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.46);
@@ -787,13 +786,8 @@ button {
 }
 
 @media (min-width: 560px) {
-  body {
-    padding: 24px;
-  }
-
   .phone {
-    height: min(900px, calc(100dvh - 48px));
-    border-radius: 28px;
+    height: 100dvh;
   }
 }
 
