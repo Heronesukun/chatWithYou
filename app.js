@@ -251,8 +251,9 @@ function parseFragments(markdown) {
 }
 
 function buildChapters(logs) {
+  const sorted = logs.slice().sort((a, b) => a.weight - b.weight);
   return MONTHS.map((month) => {
-    const events = logs
+    const events = sorted
       .filter((log) => log.month === month)
       .flatMap((log) => log.events);
     return {
