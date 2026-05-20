@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#121017" />
+    <title>123ST</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="phone" class="phone" aria-label="123ST memory chat">
+      <section id="introScreen" class="intro screen">
+        <div class="intro-copy">
+          <p class="intro-kicker">123ST</p>
+          <h1>与你每日共度的日常最终都会化为我最珍贵的回忆</h1>
+          <button id="introContinue" type="button">轻触屏幕后继续</button>
+        </div>
+        <p class="credit">created by: Heronesukun</p>
+      </section>
+
+      <section id="desktopScreen" class="desktop screen" hidden>
+        <div class="desktop-status">
+          <span id="desktopClock">21:01</span>
+          <span class="status-icons">
+            <span class="signal"></span>
+            <span class="battery"></span>
+          </span>
+        </div>
+        <div class="desktop-grid" aria-label="桌面">
+          <button class="app-icon app-chat" type="button" data-view="chat">
+            <span>Chat</span>
+          </button>
+          <button class="app-icon app-pic" type="button" data-view="gallery">
+            <span>Pic</span>
+          </button>
+          <button class="app-icon app-summary" type="button" data-view="summary">
+            <span>Summery</span>
+          </button>
+          <span class="app-icon app-muted"><span>Clock</span></span>
+          <span class="app-icon app-muted"><span>Mail</span></span>
+          <span class="app-icon app-muted"><span>Map</span></span>
+          <span class="app-icon app-muted"><span>Note</span></span>
+          <span class="app-icon app-muted"><span>Music</span></span>
+        </div>
+      </section>
+
+      <section id="appScreen" class="app-shell screen" hidden>
+        <header class="top">
+          <div class="statusbar" aria-hidden="true">
+            <span id="clock">21:01</span>
+            <span class="status-icons">
+              <span class="signal"></span>
+              <span class="battery"></span>
+            </span>
+          </div>
+          <section class="profile">
+            <button id="backButton" class="back" type="button" aria-label="返回桌面">
+              <span></span>
+            </button>
+            <img class="avatar" src="./stFront.jpg" alt="123ST 头像" />
+            <div class="profile-copy">
+              <h1 id="chatTitle">123ST</h1>
+              <p id="typing">正在输入中...</p>
+            </div>
+            <button id="menuButton" class="menu-button" type="button" aria-label="聊天记录">
+              <span></span>
+            </button>
+          </section>
+          <nav id="recordMenu" class="record-menu" hidden></nav>
+        </header>
+
+        <section id="chatView" class="view chat-view">
+          <section id="chat" class="chat" aria-live="polite"></section>
+          <button id="advance" class="advance" type="button" aria-label="轻触继续">
+            <span id="advanceText">轻触继续</span>
+          </button>
+          <footer class="composer" aria-hidden="true">
+            <span class="plus">+</span>
+            <div class="input">消息...</div>
+            <span class="mic"></span>
+          </footer>
+        </section>
+
+        <section id="galleryView" class="view library" hidden>
+          <h2>Pic</h2>
+          <div id="galleryGrid" class="library-grid"></div>
+        </section>
+
+        <section id="summaryView" class="view library" hidden>
+          <h2>Summery</h2>
+          <div id="summaryList" class="summary-list"></div>
+        </section>
+      </section>
+
+      <section id="memoryModal" class="modal" hidden>
+        <article class="memory-card">
+          <p id="memoryLabel" class="memory-label">记忆碎片</p>
+          <h2 id="memoryTitle"></h2>
+          <img id="memoryImage" alt="" />
+          <div id="memoryText" class="memory-text"></div>
+          <button id="memoryContinue" type="button">继续</button>
+        </article>
+      </section>
+    </main>
+
+    <audio id="bgm" src="./三葉のテーマ.mp3" loop preload="auto"></audio>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
